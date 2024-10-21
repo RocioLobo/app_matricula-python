@@ -70,3 +70,6 @@ Lista_Alumnos.append(Alumno2)
 
 #deseo mostrar un menú con las opciones de agregar un nuevo alumno y salir del programa.
 print(Lista_Alumnos)
+
+
+![alt text](image.png)

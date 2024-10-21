@@ -6,9 +6,11 @@
 - filtrar matriculados por programa de estudio
 """
 lista_alumnos=[]
+
 #inicio de problema
 #necesito poder agregar mas alumnos sin neceisdad de crear tantas variables
 #posible solucion cre o encerar el codigo en un cliclo while
+
 nombre=input("Ingrese el nombre del alumno: ")
 apellido=input("Ingrese el apeliido del alumno: ")
 nombre2=input("Ingrese el nombre del alumno: ")
@@ -23,6 +25,7 @@ alumno2={
 }
 lista_alumnos.append(alumno)
 lista_alumnos.append(alumno2)
+
 #fin del problema
 
 
@@ -33,39 +36,12 @@ lista_alumnos.append(alumno2)
 print(lista_alumnos)
 
 lista_alumnos=[]
-def mensaje_menu():
-    menu_opciones="""
-        ...........Bienvenido al sistema!...........
-        ................ Registrese ................
-                        elije lo que deseas hacer: 
-        1. Escribe [s] si deseas registrar un alumno
-        2. Escribe [n] si deseas salir del programa
-        Escribe tu respuesta: """
-    return menu_opciones
 
-def ingresar_datos_alumnos():
-    id=len(lista_alumnos)+1
-    cui=int(input("Ingrese el numero de su dni: "))
-    nombre=input("Ingrese el nombre del alumno: ")
-    apellido=input("Ingrese el apellido del alumno: ")
-    numero_celular=int(input("Ingrese su numero de celular: "))
-    programa_estudio=input("Ingrese programa de estudio: ")
-    ciclo_academico=input("Ingrese su ciclo academico: ")
-    email=input("Ingrese su correo electronico: ")
-    guardar_datos_alumnos(id,cui,nombre,apellido,numero_celular,programa_estudio,ciclo_academico,email)
+from  mensaje_menu import  *
 
-def guardar_datos_alumnos(id,cui,nombre,apellido,numero_celular,programa_estudio,ciclo_academico,email):
-    alumno={
-            "id":id,
-            "cui":cui,
-            "nombre":nombre,
-            "apellido":apellido,
-            "numero_celular":numero_celular,
-            "programa_estudio":programa_estudio,
-            "ciclo_academico":ciclo_academico,
-            "email":email
-            }
-    lista_alumnos.append(alumno)
+from datos_alumno import *
+
+from guardar_alumno import *
 
 while True:
     menu_opciones=input(mensaje_menu())
